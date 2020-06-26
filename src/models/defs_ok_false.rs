@@ -10,12 +10,7 @@
 
 
 /// 
-#[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum DefsOkFalse {
-    #[serde(rename = "false")]
-    _False,
-
-}
+pub type DefsOkFalse = bool;
 
 
 

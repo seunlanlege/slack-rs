@@ -17,7 +17,7 @@ pub struct ConversationsOpenSuccessSchema {
     #[serde(rename = "already_open", skip_serializing_if = "Option::is_none")]
     pub already_open: Option<bool>,
     #[serde(rename = "channel")]
-    pub channel: serde_json::Value,
+    pub channel: crate::models::ObjsConversationIm,
     #[serde(rename = "no_op", skip_serializing_if = "Option::is_none")]
     pub no_op: Option<bool>,
     #[serde(rename = "ok")]
@@ -26,7 +26,7 @@ pub struct ConversationsOpenSuccessSchema {
 
 impl ConversationsOpenSuccessSchema {
     /// Schema for successful response from conversations.open method when opening channels, ims, mpims
-    pub fn new(channel: serde_json::Value, ok: crate::models::DefsOkTrue) -> ConversationsOpenSuccessSchema {
+    pub fn new(channel: crate::models::ObjsConversationIm, ok: crate::models::DefsOkTrue) -> ConversationsOpenSuccessSchema {
         ConversationsOpenSuccessSchema {
             already_open: None,
             channel,

@@ -56,9 +56,9 @@ pub struct Enterprise {
 #[derive(Default, Debug, Clone, PartialEq, serde_derive::Serialize, serde_derive::Deserialize)]
 pub struct AuthedUser {
     pub id: String,
-    pub scope: String,
-    pub access_token: String,
-    pub token_type: String,
+    pub scope: Option<String>,
+    pub access_token: Option<String>,
+    pub token_type: Option<String>,
 }
 
 

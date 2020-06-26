@@ -94,7 +94,7 @@ pub struct PostEphemeralParams {
 }
 
 /// struct for passing parameters to the method `post_message`
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Default)]
 pub struct PostMessageParams {
     /// Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name. See [below](#channels) for more details.
     pub channel: String,
@@ -111,7 +111,7 @@ pub struct PostMessageParams {
     /// Change how messages are treated. Defaults to `none`. See [below](#formatting).
     pub parse: Option<String>,
     /// Pass true to post the message as the authed user, instead of as a bot. Defaults to false. See [authorship](#authorship) below.
-    pub as_user: Option<String>,
+    pub as_user: Option<bool>,
     /// Disable Slack markup parsing by setting to `false`. Enabled by default.
     pub mrkdwn: Option<bool>,
     /// A JSON-based array of structured blocks, presented as a URL-encoded string.
